@@ -16,6 +16,7 @@ import { useTheme } from '@/components/providers/ThemeProvider';
 import { LoginModal } from '@/components/organisms/LoginModal';
 import { CategoryMenu } from '@/components/organisms/CategoryMenu';
 import { Category } from '@/types/product';
+import { useCartStore } from '@/lib/stores/cart';
 
 interface HeaderProps {
   locale: string;
@@ -28,6 +29,8 @@ export const Header = ({ locale, categories }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const { getTotalItems } = useCartStore();
+  const cartItemsCount = getTotalItems();
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -137,6 +140,11 @@ export const Header = ({ locale, categories }: HeaderProps) => {
               className="relative rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <ShoppingCart className="h-5 w-5" />
+              {cartItemsCount > 0 && (
+                <span className="absolute right-0 top-0 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">
+                  {cartItemsCount > 9 ? '9+' : cartItemsCount}
+                </span>
+              )}
               <span className="sr-only">{t('cart')}</span>
             </Link>
 

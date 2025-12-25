@@ -68,6 +68,23 @@
     "cosmetics": "Cosmetics",
     "motherChild": "Mother & Child",
     "booksStationery": "Books & Stationery & Hobby"
+  },
+  "cart": {
+    "title": "My Cart",
+    "emptyCart": "Your cart is empty",
+    "emptyCartDescription": "There are no products in your cart yet.",
+    "continueShopping": "Continue Shopping",
+    "freeShippingBanner": "Free shipping on all products in your cart",
+    "selectAll": "Select All ({count})",
+    "noOptions": "No options",
+    "piece": "Piece",
+    "orderSummary": "Order Summary",
+    "total": "Total",
+    "checkFinalAmount": "Please check your final payment amount.",
+    "payment": "Payment ({count})",
+    "securePaymentNote": "You will not be charged until you review this order on the next page",
+    "securePaymentTitle": "Secure Payment Options",
+    "securePaymentDescription": "Meshur commits to protecting your payment information. To protect your privacy, we follow PCI DSS standards, use strong encryption, and regularly perform reviews on the system."
   }
 }
 

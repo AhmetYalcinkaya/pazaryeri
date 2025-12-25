@@ -68,6 +68,23 @@
     "cosmetics": "Kozmetik",
     "motherChild": "Anne & Çocuk",
     "booksStationery": "Kitap & Kırtasiye & Hobi"
+  },
+  "cart": {
+    "title": "Sepetim",
+    "emptyCart": "Sepetiniz boş",
+    "emptyCartDescription": "Sepetinizde henüz ürün bulunmamaktadır.",
+    "continueShopping": "Alışverişe Devam Et",
+    "freeShippingBanner": "Sepetinizdeki tüm ürünlerde ücretsiz kargo",
+    "selectAll": "Hepsini Seç ({count})",
+    "noOptions": "Seçenek yok",
+    "piece": "Adet",
+    "orderSummary": "Sipariş Özeti",
+    "total": "Toplam",
+    "checkFinalAmount": "Lütfen nihai ödeme tutarınıza bakınız.",
+    "payment": "Ödeme ({count})",
+    "securePaymentNote": "Bir sonraki sayfada bu siparişi inceleyene kadar senden ücret tahsil edilmez",
+    "securePaymentTitle": "Güvenli Ödeme Seçenekleri",
+    "securePaymentDescription": "Meşhur, ödeme bilgilerinizi korumayı taahhüt eder. Gizliliğinizi korumak için PCI DSS standardlarını izliyor, güçlü şifreleme kullanıyor ve sistemi üzerinde düzenli incelemeler gerçekleştiriyoruz."
   }
 }
 

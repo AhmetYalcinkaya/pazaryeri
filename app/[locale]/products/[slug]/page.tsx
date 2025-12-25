@@ -4,7 +4,7 @@ import { getTranslations, getLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Price } from '@/components/atoms/Price';
 import { Badge } from '@/components/atoms/Badge';
-import { Button } from '@/components/atoms/Button';
+import { AddToCartButton } from '@/components/atoms/AddToCartButton';
 import type { Metadata } from 'next';
 
 interface ProductPageProps {
@@ -103,9 +103,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             )}
           </div>
 
-          <Button variant="primary" size="lg" className="w-full">
-            {tCommon('addToCart')}
-          </Button>
+          <AddToCartButton product={product} variant="primary" size="lg" />
         </div>
       </div>
     </div>
