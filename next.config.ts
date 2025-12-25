@@ -5,8 +5,15 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['api.meshur.co', 'meshur.co'],
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.meshur.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'meshur.co',
+      },
       {
         protocol: 'https',
         hostname: '**',
