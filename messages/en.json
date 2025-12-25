@@ -1,0 +1,72 @@
+{
+  "common": {
+    "search": "Search in Meshur",
+    "login": "Login",
+    "register": "Register",
+    "categories": "Categories",
+    "bestSellers": "Best Selling Products",
+    "fiveStar": "5 Star",
+    "newArrivals": "New Arrivals",
+    "support": "Support",
+    "orders": "Orders and Account",
+    "cart": "Cart",
+    "addToCart": "Add to Cart",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "price": "Price",
+    "freeShipping": "Free Shipping",
+    "freeReturns": "Free Returns",
+    "bestChoices": "Best choices",
+    "all": "All"
+  },
+  "home": {
+    "title": "Meshur - Online Shopping",
+    "description": "Turkey's most trusted online shopping platform",
+    "hero": {
+      "title": "New Year is Coming",
+      "subtitle": "Limited time. Many Opportunities.",
+      "date": "December 1-31"
+    },
+    "whyMeshur": "Why Meshur?",
+    "securityPrivacy": "Security Privacy",
+    "securePayments": "Secure Payments",
+    "deliveryGuarantee": "Delivery Guarantee",
+    "securityWarning": "Security warning: Please be careful about fraudulent messages and links, Meshur does not request extra fees via SMS or e-mail."
+  },
+  "product": {
+    "title": "Product Details",
+    "description": "Product description",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "bestSeller": "Best Sellers",
+    "newProduct": "New Product",
+    "vegan": "VEGAN",
+    "alcoholFree": "ALCOHOL-FREE",
+    "perfumeFree": "PERFUME-FREE",
+    "hairGrowth": "Hair Growth"
+  },
+  "auth": {
+    "loginOrRegister": "Login or Register",
+    "email": "E-mail",
+    "emailPlaceholder": "E-mail or phone number",
+    "continue": "Continue",
+    "dataEncrypted": "All data will be encrypted",
+    "troubleLogin": "Are you having trouble logging in?",
+    "terms": "By continuing, you agree to the Terms of Use and accept that you have read the Privacy Policy.",
+    "termsLink": "Terms of Use",
+    "privacyLink": "Privacy Policy"
+  },
+  "categories": {
+    "electronics": "Electronics",
+    "homeFurniture": "Home & Furniture",
+    "women": "Women",
+    "sportsOutdoor": "Sports & Outdoor",
+    "shoesBags": "Shoes & Bags",
+    "men": "Men",
+    "supermarket": "Super Market",
+    "cosmetics": "Cosmetics",
+    "motherChild": "Mother & Child",
+    "booksStationery": "Books & Stationery & Hobby"
+  }
+}
+

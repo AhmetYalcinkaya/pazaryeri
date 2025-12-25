@@ -1,0 +1,89 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Elektronik",
+      "slug": "elektronik",
+      "children": [
+        {
+          "id": "1-1",
+          "name": "Telefon",
+          "slug": "telefon",
+          "parentId": "1"
+        },
+        {
+          "id": "1-2",
+          "name": "Bilgisayar & Tablet",
+          "slug": "bilgisayar-tablet",
+          "parentId": "1"
+        },
+        {
+          "id": "1-3",
+          "name": "TV & Görüntü & Ses",
+          "slug": "tv-goruntu-ses",
+          "parentId": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Ev & Mobilya",
+      "slug": "ev-mobilya",
+      "children": [
+        {
+          "id": "2-1",
+          "name": "Küçük Ev Aletleri",
+          "slug": "kucuk-ev-aletleri",
+          "parentId": "2"
+        },
+        {
+          "id": "2-2",
+          "name": "Beyaz Eşya",
+          "slug": "beyaz-esya",
+          "parentId": "2"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kozmetik",
+      "slug": "kozmetik"
+    },
+    {
+      "id": "4",
+      "name": "Kadın",
+      "slug": "kadin"
+    },
+    {
+      "id": "5",
+      "name": "Spor & Outdoor",
+      "slug": "spor-outdoor"
+    },
+    {
+      "id": "6",
+      "name": "Ayakkabı & Çanta",
+      "slug": "ayakkabi-canta"
+    },
+    {
+      "id": "7",
+      "name": "Erkek",
+      "slug": "erkek"
+    },
+    {
+      "id": "8",
+      "name": "Süper Market",
+      "slug": "super-market"
+    },
+    {
+      "id": "9",
+      "name": "Anne & Çocuk",
+      "slug": "anne-cocuk"
+    },
+    {
+      "id": "10",
+      "name": "Kitap & Kırtasiye & Hobi",
+      "slug": "kitap-kirtasiye-hobi"
+    }
+  ]
+}
+

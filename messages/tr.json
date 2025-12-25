@@ -1,0 +1,72 @@
+{
+  "common": {
+    "search": "Meşhur'da ara",
+    "login": "Oturum aç",
+    "register": "Kayıt ol",
+    "categories": "Kategoriler",
+    "bestSellers": "En Çok Satan Ürünler",
+    "fiveStar": "5 Yıldızlı",
+    "newArrivals": "Yeni Gelenler",
+    "support": "Destek",
+    "orders": "Siparişler ve Hesap",
+    "cart": "Sepet",
+    "addToCart": "Sepete Ekle",
+    "addToFavorites": "Favorilere Ekle",
+    "removeFromFavorites": "Favorilerden Çıkar",
+    "price": "Fiyat",
+    "freeShipping": "Ücretsiz Kargo",
+    "freeReturns": "Ücretsiz İade",
+    "bestChoices": "En iyi seçimler",
+    "all": "Tümü"
+  },
+  "home": {
+    "title": "Meşhur - Online Alışveriş",
+    "description": "Türkiye'nin en güvenilir online alışveriş platformu",
+    "hero": {
+      "title": "Yılbaşı Geliyor",
+      "subtitle": "Sınırlı zaman. Çok Fırsat.",
+      "date": "Aralık 1-31"
+    },
+    "whyMeshur": "Neden Meşhur?",
+    "securityPrivacy": "Güvenlik Gizlilik",
+    "securePayments": "Güvenli Ödemeler",
+    "deliveryGuarantee": "Teslimat Garantisi",
+    "securityWarning": "Güvenlik uyarısı: Lütfen dolandırıcılık mesajlarına ve bağlantılarına karşı dikkatli olun, Meşhur SMS veya e-posta yoluyla ekstra ücret talep etmez."
+  },
+  "product": {
+    "title": "Ürün Detayı",
+    "description": "Ürün açıklaması",
+    "inStock": "Stokta var",
+    "outOfStock": "Stokta yok",
+    "bestSeller": "Çok Satanlar",
+    "newProduct": "Yeni Ürün",
+    "vegan": "VEGAN",
+    "alcoholFree": "ALKOL İÇERMEZ",
+    "perfumeFree": "PARFÜM İÇERMEZ",
+    "hairGrowth": "Saç Uzaması"
+  },
+  "auth": {
+    "loginOrRegister": "Giriş Yap veya Kayıt Ol",
+    "email": "E-posta",
+    "emailPlaceholder": "E-posta veya telefon numarası",
+    "continue": "Devam Et",
+    "dataEncrypted": "Verilerin tümü şifrelenicektir",
+    "troubleLogin": "Giriş yaparken sorun mu yaşıyorsunuz?",
+    "terms": "Devam ederek Kullanım koşulları onayladığınızı ve Gizlilik Politikası okuduğunuzu kabul etmiş olursunuz.",
+    "termsLink": "Kullanım koşulları",
+    "privacyLink": "Gizlilik Politikası"
+  },
+  "categories": {
+    "electronics": "Elektronik",
+    "homeFurniture": "Ev & Mobilya",
+    "women": "Kadın",
+    "sportsOutdoor": "Spor & Outdoor",
+    "shoesBags": "Ayakkabı & Çanta",
+    "men": "Erkek",
+    "supermarket": "Süper Market",
+    "cosmetics": "Kozmetik",
+    "motherChild": "Anne & Çocuk",
+    "booksStationery": "Kitap & Kırtasiye & Hobi"
+  }
+}
+
