@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import {
@@ -17,6 +17,7 @@ import { LoginModal } from '@/components/organisms/LoginModal';
 import { CategoryMenu } from '@/components/organisms/CategoryMenu';
 import { Category } from '@/types/product';
 import { useCartStore } from '@/lib/stores/cart';
+import { LanguageSwitcher } from '@/components/molecules/LanguageSwitcher';
 
 interface HeaderProps {
   locale: string;
@@ -30,7 +31,15 @@ export const Header = ({ locale, categories }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [loginModalOpen, setLoginModalOpen] = useState(false);
   const { getTotalItems } = useCartStore();
-  const cartItemsCount = getTotalItems();
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Prevent hydration mismatch by only showing cart count after mount
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const cartItemsCount = isMounted ? getTotalItems() : 0;
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -135,12 +144,14 @@ export const Header = ({ locale, categories }: HeaderProps) => {
               {t('support')}
             </Link>
 
+            <LanguageSwitcher currentLocale={locale} />
+
             <Link
               href={`/${locale}/cart`}
               className="relative rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <ShoppingCart className="h-5 w-5" />
-              {cartItemsCount > 0 && (
+              {isMounted && cartItemsCount > 0 && (
                 <span className="absolute right-0 top-0 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">
                   {cartItemsCount > 9 ? '9+' : cartItemsCount}
                 </span>
@@ -207,6 +218,9 @@ export const Header = ({ locale, categories }: HeaderProps) => {
                 </>
               )}
             </button>
+            <div className="pt-2">
+              <LanguageSwitcher currentLocale={locale} />
+            </div>
           </nav>
         </div>
       )}
