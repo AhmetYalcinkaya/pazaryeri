@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Product } from '@/types/product';
 import { Badge } from '@/components/atoms/Badge';
 import { Price } from '@/components/atoms/Price';
-import { Button } from '@/components/atoms/Button';
 import { useFavoritesStore } from '@/lib/stores/favorites';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -75,33 +74,21 @@ export const ProductCard = ({ product, locale }: ProductCardProps) => {
         </button>
       </Link>
 
-      <div className="flex flex-1 flex-col p-4">
-        <Link href={`/${locale}/products/${product.slug}`}>
-          <h3 className="mb-2 line-clamp-2 text-sm font-medium text-gray-900 transition-colors hover:text-red-600 dark:text-gray-100">
-            {product.name}
-          </h3>
-        </Link>
+      <Link
+        href={`/${locale}/products/${product.slug}`}
+        className="flex flex-1 flex-col p-4"
+      >
+        <h3 className="mb-2 line-clamp-2 text-sm font-medium text-gray-900 transition-colors hover:text-red-600 dark:text-gray-100">
+          {product.name}
+        </h3>
 
         <div className="mt-auto">
           <Price
             amount={product.price}
             originalAmount={product.originalPrice}
-            className="mb-3"
           />
-
-          <Button
-            variant="primary"
-            size="sm"
-            className="w-full"
-            onClick={(e) => {
-              e.preventDefault();
-              // Add to cart logic here
-            }}
-          >
-            {t('addToCart')}
-          </Button>
         </div>
-      </div>
+      </Link>
     </motion.div>
   );
 };

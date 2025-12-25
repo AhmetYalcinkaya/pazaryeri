@@ -31,7 +31,8 @@
     "securityPrivacy": "Güvenlik Gizlilik",
     "securePayments": "Güvenli Ödemeler",
     "deliveryGuarantee": "Teslimat Garantisi",
-    "securityWarning": "Güvenlik uyarısı: Lütfen dolandırıcılık mesajlarına ve bağlantılarına karşı dikkatli olun, Meşhur SMS veya e-posta yoluyla ekstra ücret talep etmez."
+    "securityWarning": "Güvenlik uyarısı: Lütfen dolandırıcılık mesajlarına ve bağlantılarına karşı dikkatli olun, Meşhur SMS veya e-posta yoluyla ekstra ücret talep etmez.",
+    "bestChoices": "En iyi seçimler"
   },
   "product": {
     "title": "Ürün Detayı",

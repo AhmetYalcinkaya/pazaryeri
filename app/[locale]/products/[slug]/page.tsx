@@ -38,8 +38,9 @@ export async function generateMetadata({
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const { slug, locale } = await params;
+  const { slug } = await params;
   const t = await getTranslations('product');
+  const tCommon = await getTranslations('common');
   const product = await getProductBySlug(slug);
 
   if (!product) {
@@ -103,7 +104,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
 
           <Button variant="primary" size="lg" className="w-full">
-            Sepete Ekle
+            {tCommon('addToCart')}
           </Button>
         </div>
       </div>

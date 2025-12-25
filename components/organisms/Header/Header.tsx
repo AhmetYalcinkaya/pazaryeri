@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { usePathname } from '@/i18n/routing';
 import {
   Search,
   ShoppingCart,
@@ -14,19 +13,21 @@ import {
   Sun,
 } from 'lucide-react';
 import { useTheme } from '@/components/providers/ThemeProvider';
-import { Button } from '@/components/atoms/Button';
-import { cn } from '@/lib/utils';
+import { LoginModal } from '@/components/organisms/LoginModal';
+import { CategoryMenu } from '@/components/organisms/CategoryMenu';
+import { Category } from '@/types/product';
 
 interface HeaderProps {
   locale: string;
+  categories: Category[];
 }
 
-export const Header = ({ locale }: HeaderProps) => {
+export const Header = ({ locale, categories }: HeaderProps) => {
   const t = useTranslations('common');
-  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -52,7 +53,7 @@ export const Header = ({ locale }: HeaderProps) => {
             href={`/${locale}/sell`}
             className="rounded-md bg-red-600 px-3 py-1 text-white hover:bg-red-700"
           >
-            Meşhur'da Satış Hemen Katıl &gt;
+            Meşhur&apos;da Satış Hemen Katıl &gt;
           </Link>
         </div>
       </div>
@@ -67,17 +68,7 @@ export const Header = ({ locale }: HeaderProps) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-6 md:flex">
-            <Link
-              href={`/${locale}`}
-              className={cn(
-                'text-sm font-medium transition-colors hover:text-red-600',
-                pathname === `/${locale}` || pathname === `/${locale}/`
-                  ? 'text-red-600'
-                  : 'text-gray-700 dark:text-gray-300'
-              )}
-            >
-              {t('categories')}
-            </Link>
+            <CategoryMenu locale={locale} categories={categories} />
             <Link
               href={`/${locale}/best-sellers`}
               className="text-sm font-medium text-gray-700 transition-colors hover:text-red-600 dark:text-gray-300"
@@ -126,13 +117,13 @@ export const Header = ({ locale }: HeaderProps) => {
               )}
             </button>
 
-            <Link
-              href={`/${locale}/login`}
+            <button
+              onClick={() => setLoginModalOpen(true)}
               className="hidden items-center gap-1 text-sm text-gray-700 hover:text-red-600 dark:text-gray-300 md:flex"
             >
               <User className="h-5 w-5" />
               <span>{t('login')}</span>
-            </Link>
+            </button>
 
             <Link
               href={`/${locale}/support`}
@@ -183,13 +174,15 @@ export const Header = ({ locale }: HeaderProps) => {
             >
               {t('bestSellers')}
             </Link>
-            <Link
-              href={`/${locale}/login`}
-              className="text-sm font-medium text-gray-700 hover:text-red-600 dark:text-gray-300"
-              onClick={() => setMobileMenuOpen(false)}
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setLoginModalOpen(true);
+              }}
+              className="text-left text-sm font-medium text-gray-700 hover:text-red-600 dark:text-gray-300"
             >
               {t('login')}
-            </Link>
+            </button>
             <button
               onClick={toggleTheme}
               className="flex items-center gap-2 text-left text-sm font-medium text-gray-700 hover:text-red-600 dark:text-gray-300"
@@ -209,6 +202,12 @@ export const Header = ({ locale }: HeaderProps) => {
           </nav>
         </div>
       )}
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+      />
     </header>
   );
 };

@@ -31,7 +31,8 @@
     "securityPrivacy": "Security Privacy",
     "securePayments": "Secure Payments",
     "deliveryGuarantee": "Delivery Guarantee",
-    "securityWarning": "Security warning: Please be careful about fraudulent messages and links, Meshur does not request extra fees via SMS or e-mail."
+    "securityWarning": "Security warning: Please be careful about fraudulent messages and links, Meshur does not request extra fees via SMS or e-mail.",
+    "bestChoices": "Best choices"
   },
   "product": {
     "title": "Product Details",
