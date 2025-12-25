@@ -194,9 +194,8 @@ Gerçek bir API varmış gibi mock JSON dosyaları kullanıldı:
 
 ### Trade-off'lar
 
-1. **Storybook:** Kurulum sırasında versiyon uyumsuzluğu nedeniyle ertelendi, component'ler test edilebilir yapıda
-2. **Test Coverage:** Temel test yapısı hazırlandı, tam coverage için daha fazla test yazılabilir
-3. **API Integration:** Mock data kullanıldı, gerçek API entegrasyonu için `lib/api/` katmanı hazır
+1. **Test Coverage:** Temel test yapısı hazırlandı, tam coverage için daha fazla test yazılabilir
+2. **API Integration:** Mock data kullanıldı, gerçek API entegrasyonu için `lib/api/` katmanı hazır
 
 ## 📚 Kullanılan Teknolojiler
 
